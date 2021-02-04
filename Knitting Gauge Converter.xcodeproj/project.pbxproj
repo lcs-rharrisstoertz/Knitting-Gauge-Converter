@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		250A53B725CB847000ACC3EC /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250A53B625CB847000ACC3EC /* main.swift */; };
+		250A53C325CB849C00ACC3EC /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250A53C225CB849C00ACC3EC /* Extension.swift */; };
+		250A53C625CB84BB00ACC3EC /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250A53C525CB84BB00ACC3EC /* Functions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,8 @@
 /* Begin PBXFileReference section */
 		250A53B325CB847000ACC3EC /* Knitting Gauge Converter */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Knitting Gauge Converter"; sourceTree = BUILT_PRODUCTS_DIR; };
 		250A53B625CB847000ACC3EC /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		250A53C225CB849C00ACC3EC /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		250A53C525CB84BB00ACC3EC /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +45,8 @@
 		250A53AA25CB847000ACC3EC = {
 			isa = PBXGroup;
 			children = (
+				250A53C525CB84BB00ACC3EC /* Functions.swift */,
+				250A53C225CB849C00ACC3EC /* Extension.swift */,
 				250A53B525CB847000ACC3EC /* Knitting Gauge Converter */,
 				250A53B425CB847000ACC3EC /* Products */,
 			);
@@ -120,6 +126,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				250A53B725CB847000ACC3EC /* main.swift in Sources */,
+				250A53C325CB849C00ACC3EC /* Extension.swift in Sources */,
+				250A53C625CB84BB00ACC3EC /* Functions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
