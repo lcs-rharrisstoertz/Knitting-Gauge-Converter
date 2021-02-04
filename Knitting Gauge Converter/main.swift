@@ -22,21 +22,14 @@ let swatchStitchLength = Double.collectInput(withPrompt: "How many rows long is 
 print("========================")
 print("Please measure the length and width of your gauge swatch")
 print("========================")
-print ("Which unit of distance are your measurements in?")
-print("1 - inches")
-print("2 - feet")
-print("3 - centimeters")
-print("4 - millimeters")
+printMenu()
 let startingUnit = String.collectInput(withPrompt: "Please enter your selection: ", acceptableValues: ["1", "2", "3", "4"])//gets the unit of measurement that the gauge is measured in
 
 let swatchLength = Double.collectInput(withPrompt: "How many units long is your gauge swatch? ", minimum: 0, maximum: nil)
 let swatchWidth = Double.collectInput(withPrompt: "How many units wide is your gauge swatch? ", minimum: 0, maximum: nil)//gets size of gauge
 
 print ("Which unit of distance are your desired measurements for your completed project in?")
-print("1 - inches")
-print("2 - feet")
-print("3 - centimeters")
-print("4 - millimeters")
+printMenu()
 let endingUnit = String.collectInput(withPrompt: "Please enter your selection: ", acceptableValues: ["1", "2", "3", "4"])//gets the unit of measurement that the final project is measured in
 
 let finalLength = Double.collectInput(withPrompt: "How many units long would you like your completed project to be? ", minimum: 0, maximum: nil)

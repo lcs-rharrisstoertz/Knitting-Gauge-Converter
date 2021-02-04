@@ -49,3 +49,9 @@ func centimetersToMillimeters(CMDistance: Double) -> Double {
     return (CMDistance * 10.0)
 }
 
+func printMenu(){
+    print("1 - inches")
+    print("2 - feet")
+    print("3 - centimeters")
+    print("4 - millimeters")
+}
