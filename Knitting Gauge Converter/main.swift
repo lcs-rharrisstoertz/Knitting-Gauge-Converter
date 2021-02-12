@@ -73,3 +73,6 @@ let requiredWidth = finalWidth * widthDensity//given the stitch size, calculates
 
 print("========================")
 print("To achieve your desired dimensions, your project needs to be \(requiredWidth) stitches wide and \(requiredLength) rows long!")
+
+
+
