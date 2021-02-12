@@ -8,9 +8,33 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    // MARK: Stored properties
+    @State private var swatchStitchWidth: String = ""
+    @State private var swatchStitchLength: String = ""
+    @State private var swatchLength: String = ""
+    @State private var swatchWidth: String = ""
+    @State private var finalLength: String = ""
+    @State private var finalWidth: String = ""
+    
+    
+    // MARK: Computed properties
+    private var output: String {
+        return "To achieve your desired dimensions, your project needs to be requiredWidth stitches wide and requiredLength rows long!"
+    }
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+
+        Form {
+            TextField("How many stitches wide is the gauge swatch?", text: $swatchStitchWidth)
+                .keyboardType(.numberPad)
+            TextField("How many rows long is the gauge swatch?", text: $swatchStitchLength)
+                .keyboardType(.numberPad)
+            Picker("Starting unit:")
+            
+            Text(output)
+        }
+        
     }
 }
 

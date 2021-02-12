@@ -7,8 +7,6 @@
 
 import Foundation
 
-import Cocoa
-
 extension Int {
     
     static func collectInput(withPrompt prompt: String, minimum: Int?, maximum: Int?) -> Int {
