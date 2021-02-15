@@ -19,19 +19,15 @@ struct ContentView: View {
     @State private var finalWidth: String = ""
     @State private var startingUnit: String = ""
     @State private var endingUnit: String = ""
-    @State private var CMWidth = 0.0
-    @State private var CMLength = 0.0
-    @State private var convertedLength = 0.0
-    @State private var convertedWidth = 0.0
     
-    
+        
     // MARK: Computed properties
-
-
+    
+//    private var requiredWidth = getRequiredWidth(startingUnit: startingUnit, swatchWidth: Double(swatchWidth)!, endingUnit: endingUnit, swatchStitchWidth: Double(swatchStitchWidth)!, finalWidth: Double(finalWidth)!)
+//    private var requiredLength = getRequiredLength(startingUnit: startingUnit, swatchLength: Double(swatchLength)!, endingUnit: endingUnit, swatchStitchLength: Double(swatchStitchLength)!, finalLength: Double(finalLength)!)
     
     private var output: String {
         return "To achieve your desired dimensions, your project needs to be requiredWidth stitches wide and requiredLength rows long!"
-
     }
     
     var body: some View {

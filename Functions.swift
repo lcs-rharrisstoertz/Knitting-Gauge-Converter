@@ -56,4 +56,44 @@ func printMenu(){
     print("4 - millimeters")
 }
 
-
+//func getRequiredLength (startingUnit: String, swatchLength: Double, endingUnit: String, swatchStitchLength: Double, finalLength: Double) -> Double {
+//    var CMLength = 0.0
+//    var convertedLength = 0.0
+//    switch startingUnit{
+//    case "1": CMLength = inchesToCentimeters(startingDistance: swatchLength)
+//    case "2": CMLength = feetToCentimeters(startingDistance: swatchLength)
+//    case "3": CMLength = swatchLength
+//    case "4": CMLength = millimetersToCentimeters(startingDistance: swatchLength)
+//    default:
+//        break}//converts length to cm
+//    switch endingUnit{
+//    case "1": convertedLength = centimetersToInches(CMDistance: CMLength)
+//    case "2": convertedLength = centimetersToFeet(CMDistance: CMLength)
+//    case "3": convertedLength = swatchLength
+//    case "4": convertedLength = centimetersToMillimeters(CMDistance: CMLength)
+//    default:
+//        break}//converts length in cm to the unit for the final project
+//    let lengthDensity = swatchStitchLength/convertedLength//calculates how big each stitch is
+//    return finalLength * lengthDensity
+//}
+//
+//func getRequiredWidth (startingUnit: String, swatchWidth: Double, endingUnit: String, swatchStitchWidth: Double, finalWidth: Double) -> Double {
+//    var CMWidth = 0.0
+//    var convertedWidth = 0.0
+//    switch startingUnit{
+//    case "1": CMWidth = inchesToCentimeters(startingDistance: swatchWidth)
+//    case "2": CMWidth = feetToCentimeters(startingDistance: swatchWidth)
+//    case "3": CMWidth = swatchWidth
+//    case "4": CMWidth = millimetersToCentimeters(startingDistance: swatchWidth)
+//    default:
+//        break}//converts length to cm
+//    switch endingUnit{
+//    case "1": convertedWidth = centimetersToInches(CMDistance: CMWidth)
+//    case "2": convertedWidth = centimetersToFeet(CMDistance: CMWidth)
+//    case "3": convertedWidth = swatchWidth
+//    case "4": convertedWidth = centimetersToMillimeters(CMDistance: CMWidth)
+//    default:
+//        break}//converts length in cm to the unit for the final project
+//    let widthDensity = swatchStitchWidth/convertedWidth//calculates how big each stitch is
+//    return finalWidth * widthDensity
+//}
