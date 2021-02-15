@@ -24,6 +24,8 @@ struct ContentView: View {
 
     private var output: String {
         
+        //guard let statements make sure that the user has entered numerical values in all fields
+        //if not, they are told to enter a different value
         guard let swatchStitchWidthDouble = Double(swatchStitchWidth) else {
             return "Please provide a valid numerical value."
         }
@@ -42,9 +44,10 @@ struct ContentView: View {
         guard let finalWidthDouble = Double(finalWidth) else {
             return "Please provide a valid numerical value."
         }
-
+//once the user has entered proper numerical values, functions are called to calculate the number of stitches needed for their project
         let requiredWidth = getRequiredWidth(startingUnit: startingUnit, swatchWidth: swatchWidthDouble, endingUnit: endingUnit, swatchStitchWidth: swatchStitchWidthDouble, finalWidth: finalWidthDouble)
         let requiredLength = getRequiredLength(startingUnit: startingUnit, swatchLength: swatchLengthDouble, endingUnit: endingUnit, swatchStitchLength: swatchStitchLengthDouble, finalLength: finalLengthDouble)
+            //the program returns the number of stitches needed
         return "To achieve your desired dimensions, your project needs to be \(requiredWidth) stitches wide and \(requiredLength) rows long!"
     }
     
@@ -55,15 +58,16 @@ struct ContentView: View {
             NavigationLink(destination: HowToUse()){
                 Text("Instructions")
             }
-            }
-            Section(header: Text("Gauge Swatch Stitch Count")) {
+            }//link to instructions on how to make the gauge swatch
+            //MARK: Input
+            Section(header: Text("Gauge Swatch Stitch Count")) {//this section gets the number of stitches in the gauge swatch
             TextField("Number of stitches wide", text: $swatchStitchWidth)
                 .keyboardType(.numberPad)
             
             TextField("Number of rows long", text: $swatchStitchLength)
                 .keyboardType(.numberPad)
             }
-            Section(header: Text("Gauge Swatch measurements")) {
+            Section(header: Text("Gauge Swatch measurements")) {//this section gets the measurements and units of the gauge swatch
             Picker("Starting unit:", selection: $startingUnit) {
                 Text("inches").tag("1")
                 Text("feet").tag("2")
@@ -78,7 +82,7 @@ struct ContentView: View {
             TextField("Length", text: $swatchLength)
                 .keyboardType(.numberPad)
             }
-            Section(header: Text("Desired final measurements")) {
+            Section(header: Text("Desired final measurements")) {//this section gets the measurements for how big the user wants their completed knitting to be
             Picker("Ending unit:", selection: $endingUnit) {
                 Text("inches").tag("1")
                 Text("feet").tag("2")
@@ -93,11 +97,12 @@ struct ContentView: View {
             TextField("Desired length", text: $finalLength)
                 .keyboardType(.numberPad)
             }
-            Section(header: Text("Final stitch count")) {
+            //MARK: Output
+            Section(header: Text("Final stitch count")) {//this section returns the number of stitches needed
             Text(output)
             }
         }
-        .navigationTitle("Stitch Calculator")
+        .navigationTitle("Stitch Calculator🧶")
     }
 
     }
