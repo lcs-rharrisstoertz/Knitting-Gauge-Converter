@@ -50,20 +50,20 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView{
-            VStack() {
-        List{
-        NavigationLink(destination: HowToUse()){
-            Text("Instructions")
-        }
-        }
-        .frame(height: nil)
         Form {
-            TextField("How many stitches wide is the gauge swatch?", text: $swatchStitchWidth)
+            List{
+            NavigationLink(destination: HowToUse()){
+                Text("Instructions")
+            }
+            }
+            Section(header: Text("Gauge Swatch Stitch Count")) {
+            TextField("Number of stitches wide", text: $swatchStitchWidth)
                 .keyboardType(.numberPad)
             
-            TextField("How many rows long is the gauge swatch?", text: $swatchStitchLength)
+            TextField("Number of rows long", text: $swatchStitchLength)
                 .keyboardType(.numberPad)
-            
+            }
+            Section(header: Text("Gauge Swatch measurements")) {
             Picker("Starting unit:", selection: $startingUnit) {
                 Text("inches").tag("1")
                 Text("feet").tag("2")
@@ -72,12 +72,13 @@ struct ContentView: View {
             }
             .pickerStyle(SegmentedPickerStyle())
             
-            TextField("How many \(startingUnit) wide is the gauge swatch?", text: $swatchWidth)
+            TextField("Width", text: $swatchWidth)
                 .keyboardType(.numberPad)
             
-            TextField("How many \(startingUnit) long is the gauge swatch?", text: $swatchLength)
+            TextField("Length", text: $swatchLength)
                 .keyboardType(.numberPad)
-            
+            }
+            Section(header: Text("Desired final measurements")) {
             Picker("Ending unit:", selection: $endingUnit) {
                 Text("inches").tag("1")
                 Text("feet").tag("2")
@@ -86,17 +87,19 @@ struct ContentView: View {
             }
             .pickerStyle(SegmentedPickerStyle())
             
-            TextField("How many \(endingUnit) wide would you like your project to be?", text: $finalWidth)
+            TextField("Desired width", text: $finalWidth)
                 .keyboardType(.numberPad)
             
-            TextField("How many \(endingUnit) long would you like your project to be?", text: $finalLength)
+            TextField("Desired length", text: $finalLength)
                 .keyboardType(.numberPad)
-            
+            }
+            Section(header: Text("Final stitch count")) {
             Text(output)
+            }
         }
+        .navigationTitle("Stitch Calculator")
     }
 
-    }
     }
 }
 
