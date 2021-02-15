@@ -24,19 +24,31 @@ struct ContentView: View {
     // MARK: Computed properties
 
     private var output: String {
-        let requiredWidth = getRequiredWidth(startingUnit: startingUnit, swatchWidth: Double(swatchWidth)!, endingUnit: endingUnit, swatchStitchWidth: Double(swatchStitchWidth)!, finalWidth: Double(finalWidth)!)
-        let requiredLength = getRequiredLength(startingUnit: startingUnit, swatchLength: Double(swatchLength)!, endingUnit: endingUnit, swatchStitchLength: Double(swatchStitchLength)!, finalLength: Double(finalLength)!)
+        
+        guard let swatchStitchWidthDouble = Double(swatchStitchWidth) else {
+            return "Please provide a valid numerical value."
+        }
+        guard let swatchStitchLengthDouble = Double(swatchStitchLength) else {
+            return "Please provide a valid numerical value."
+        }
+        guard let swatchLengthDouble = Double(swatchLength) else {
+            return "Please provide a valid numerical value."
+        }
+        guard let swatchWidthDouble = Double(swatchWidth) else {
+            return "Please provide a valid numerical value."
+        }
+        guard let finalLengthDouble = Double(finalLength) else {
+            return "Please provide a valid numerical value."
+        }
+        guard let finalWidthDouble = Double(finalWidth) else {
+            return "Please provide a valid numerical value."
+        }
+
+        let requiredWidth = getRequiredWidth(startingUnit: startingUnit, swatchWidth: swatchWidthDouble, endingUnit: endingUnit, swatchStitchWidth: swatchStitchWidthDouble, finalWidth: finalWidthDouble)
+        let requiredLength = getRequiredLength(startingUnit: startingUnit, swatchLength: swatchLengthDouble, endingUnit: endingUnit, swatchStitchLength: swatchStitchLengthDouble, finalLength: finalLengthDouble)
         return "To achieve your desired dimensions, your project needs to be \(requiredWidth) stitches wide and \(requiredLength) rows long!"
     }
     
-    
-//    private var requiredWidth = getRequiredWidth(startingUnit: startingUnit, swatchWidth: Double(swatchWidth)!, endingUnit: endingUnit, swatchStitchWidth: Double(swatchStitchWidth)!, finalWidth: Double(finalWidth)!)
-//    private var requiredLength = getRequiredLength(startingUnit: startingUnit, swatchLength: Double(swatchLength)!, endingUnit: endingUnit, swatchStitchLength: Double(swatchStitchLength)!, finalLength: Double(finalLength)!)
-    
-//    private var output: String {
-//        return "To achieve your desired dimensions, your project needs to be requiredWidth stitches wide and requiredLength rows long!"
-//    }
-//
     var body: some View {
 
         Form {
