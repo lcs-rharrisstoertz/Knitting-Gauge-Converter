@@ -4,7 +4,6 @@
 //
 //  Created by Harris-Stoertz, Rowan on 2021-02-12.
 //
-
 import SwiftUI
 
 
@@ -50,7 +49,14 @@ struct ContentView: View {
     }
     
     var body: some View {
-
+        NavigationView{
+            VStack() {
+        List{
+        NavigationLink(destination: HowToUse()){
+            Text("Instructions")
+        }
+        }
+        .frame(height: nil)
         Form {
             TextField("How many stitches wide is the gauge swatch?", text: $swatchStitchWidth)
                 .keyboardType(.numberPad)
@@ -88,7 +94,9 @@ struct ContentView: View {
             
             Text(output)
         }
-        
+    }
+
+    }
     }
 }
 

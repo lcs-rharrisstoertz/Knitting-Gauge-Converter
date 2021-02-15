@@ -13,6 +13,7 @@
 		25034BB225D6EE2400304420 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25034BB125D6EE2400304420 /* Preview Assets.xcassets */; };
 		25034BB925D6EE2B00304420 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250A53C225CB849C00ACC3EC /* Extension.swift */; };
 		25034BBA25D6EE3000304420 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250A53C525CB84BB00ACC3EC /* Functions.swift */; };
+		25034BBE25DA152F00304420 /* HowToUse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25034BBD25DA152F00304420 /* HowToUse.swift */; };
 		250A53B725CB847000ACC3EC /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250A53B625CB847000ACC3EC /* main.swift */; };
 		250A53C325CB849C00ACC3EC /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250A53C225CB849C00ACC3EC /* Extension.swift */; };
 		250A53C625CB84BB00ACC3EC /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 250A53C525CB84BB00ACC3EC /* Functions.swift */; };
@@ -37,6 +38,7 @@
 		25034BAE25D6EE2400304420 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		25034BB125D6EE2400304420 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		25034BB325D6EE2400304420 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25034BBD25DA152F00304420 /* HowToUse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowToUse.swift; sourceTree = "<group>"; };
 		250A53B325CB847000ACC3EC /* Knitting Gauge Converter */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Knitting Gauge Converter"; sourceTree = BUILT_PRODUCTS_DIR; };
 		250A53B625CB847000ACC3EC /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		250A53C225CB849C00ACC3EC /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 			children = (
 				25034BAA25D6EE2000304420 /* iOS__KnittingGaugeConverterApp.swift */,
 				25034BAC25D6EE2000304420 /* ContentView.swift */,
+				25034BBD25DA152F00304420 /* HowToUse.swift */,
 				25034BAE25D6EE2400304420 /* Assets.xcassets */,
 				25034BB325D6EE2400304420 /* Info.plist */,
 				25034BB025D6EE2400304420 /* Preview Content */,
@@ -201,6 +204,7 @@
 			files = (
 				25034BBA25D6EE3000304420 /* Functions.swift in Sources */,
 				25034BB925D6EE2B00304420 /* Extension.swift in Sources */,
+				25034BBE25DA152F00304420 /* HowToUse.swift in Sources */,
 				25034BAD25D6EE2000304420 /* ContentView.swift in Sources */,
 				25034BAB25D6EE2000304420 /* iOS__KnittingGaugeConverterApp.swift in Sources */,
 			);
