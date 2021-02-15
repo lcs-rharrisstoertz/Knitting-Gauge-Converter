@@ -22,14 +22,21 @@ struct ContentView: View {
     
         
     // MARK: Computed properties
+
+    private var output: String {
+        let requiredWidth = getRequiredWidth(startingUnit: startingUnit, swatchWidth: Double(swatchWidth)!, endingUnit: endingUnit, swatchStitchWidth: Double(swatchStitchWidth)!, finalWidth: Double(finalWidth)!)
+        let requiredLength = getRequiredLength(startingUnit: startingUnit, swatchLength: Double(swatchLength)!, endingUnit: endingUnit, swatchStitchLength: Double(swatchStitchLength)!, finalLength: Double(finalLength)!)
+        return "To achieve your desired dimensions, your project needs to be \(requiredWidth) stitches wide and \(requiredLength) rows long!"
+    }
+    
     
 //    private var requiredWidth = getRequiredWidth(startingUnit: startingUnit, swatchWidth: Double(swatchWidth)!, endingUnit: endingUnit, swatchStitchWidth: Double(swatchStitchWidth)!, finalWidth: Double(finalWidth)!)
 //    private var requiredLength = getRequiredLength(startingUnit: startingUnit, swatchLength: Double(swatchLength)!, endingUnit: endingUnit, swatchStitchLength: Double(swatchStitchLength)!, finalLength: Double(finalLength)!)
     
-    private var output: String {
-        return "To achieve your desired dimensions, your project needs to be requiredWidth stitches wide and requiredLength rows long!"
-    }
-    
+//    private var output: String {
+//        return "To achieve your desired dimensions, your project needs to be requiredWidth stitches wide and requiredLength rows long!"
+//    }
+//
     var body: some View {
 
         Form {
@@ -72,6 +79,7 @@ struct ContentView: View {
         
     }
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
